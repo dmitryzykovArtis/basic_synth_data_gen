@@ -52,6 +52,11 @@ public class ColorEncoding
 	{
 		Color color;
 		if (grayscale){
+			if (layer < 8){
+				layer = 0;
+			} else {
+				layer = layer - 7;
+			}
 			color = new Color(layer/255.0f, layer/255.0f, layer/255.0f);
 		}else{
 			// Following value must be in the range (0.5 .. 1.0)

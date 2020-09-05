@@ -158,11 +158,11 @@ MonoBehaviour:
   - {fileID: 8428199045780549032, guid: daef3ef6002b9471e839a0443118dc0e, type: 3}
   - {fileID: 3682170109103340111, guid: b8d55347d721c4d9da53234f2ce62648, type: 3}
   minObjects: 10
-  maxObjects: 50
-  trainingImages: 100
-  validationImages: 20
-  frameDivision: 1
-  grayscale: 0
+  maxObjects: 20
+  trainingImages: 2000
+  validationImages: 500
+  frameDivision: 1600
+  grayscale: 1
   save: 1
 --- !u!4 &471059891
 Transform:
@@ -427,8 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7e9fcb795b84664bfc1ac40799a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uberReplacementShader: {fileID: 4800000, guid: 171e6e515a12e4a298dce708924e98ba,
-    type: 3}
+  uberReplacementShader: {fileID: 4800000, guid: 171e6e515a12e4a298dce708924e98ba, type: 3}
   opticalFlowShader: {fileID: 4800000, guid: 2a970eca3c9e84f13b5b616e530a7919, type: 3}
   opticalFlowSensitivity: 1
 --- !u!1 &1972497117
@@ -448,7 +447,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!64 &1972497118
 MeshCollider:
@@ -472,7 +471,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972497117}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1

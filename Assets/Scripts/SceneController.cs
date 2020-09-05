@@ -31,7 +31,7 @@ public class SceneController : MonoBehaviour
             }
             frameCount++;
             if (save){
-                if (frameCount < trainingImages){
+                if (frameCount <= trainingImages){
                     //Сохраняем изображения
                     string filename = $"image_{frameCount.ToString().PadLeft(5, '0')}";
                     synth.Save(filename, 512, 512, "captures/train", new int[2] {0, 2});

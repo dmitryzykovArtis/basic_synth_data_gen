@@ -181,29 +181,30 @@ public class ImageSynthesis : MonoBehaviour {
 			filenameExtension = ".png";
 		var filenameWithoutExtension = Path.GetFileNameWithoutExtension(filename);
 
-		var pathWithoutExtension = Path.Combine(path, filenameWithoutExtension);
+		// var pathWithoutExtension = Path.Combine(path, filenameWithoutExtension);
 
 		// execute as coroutine to wait for the EndOfFrame before starting capture
 		StartCoroutine(
-			WaitForEndOfFrameAndSave(pathWithoutExtension, filenameExtension, width, height, passes));
+			WaitForEndOfFrameAndSave(filenameWithoutExtension, path, filenameExtension, width, height, passes));
 	}
 
-	private IEnumerator WaitForEndOfFrameAndSave(string filenameWithoutExtension, string filenameExtension, int width, int height, int[] passes)
+	private IEnumerator WaitForEndOfFrameAndSave(string filenameWithoutExtension, string path, string filenameExtension, int width, int height, int[] passes)
 	{
 		yield return new WaitForEndOfFrame();
-		Save(filenameWithoutExtension, filenameExtension, width, height, passes);
+		Save(filenameWithoutExtension, path, filenameExtension, width, height, passes);
 	}
 
-	private void Save(string filenameWithoutExtension, string filenameExtension, int width, int height, int[] passes)
+	private void Save(string filenameWithoutExtension, string path, string filenameExtension, int width, int height, int[] passes)
 	{
 		if (passes == null){
 			foreach (var pass in capturePasses)
-			Save(pass.camera, filenameWithoutExtension + pass.name + filenameExtension, width, height, pass.supportsAntialiasing, pass.needsRescale);
+			Save(pass.camera, filenameWithoutExtension + filenameExtension, width, height, pass.supportsAntialiasing, pass.needsRescale);
 		}else{
 			for (int i = 0; i < passes.Length; i++)
 			{
 				var pass = capturePasses[passes[i]];
-				Save(pass.camera, filenameWithoutExtension + pass.name + filenameExtension, width, height, pass.supportsAntialiasing, pass.needsRescale);
+				var pathWithoutExtension = Path.Combine(path, pass.name, "class1", filenameWithoutExtension);
+				Save(pass.camera, pathWithoutExtension + filenameExtension, width, height, pass.supportsAntialiasing, pass.needsRescale);
 			}
 		}
 	}
