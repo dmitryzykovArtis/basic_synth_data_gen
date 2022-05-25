@@ -22,5 +22,4 @@ Object detection examples:
 
 ![DataSet and Model Weghts](https://drive.google.com/drive/folders/1OtSgMSeH7N3kO16I3AifA0WDjgKcQFol?usp=sharing)
 
-
-<img src="https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/ezgif-3-528af576dc.gif" width="350"> 
+![](https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/ezgif-3-528af576dc.gif)
