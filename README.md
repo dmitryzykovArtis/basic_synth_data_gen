@@ -3,7 +3,7 @@ Generation synthetic image data for segmentation with unity.
 
 Semantic segmentation examples:
 
-<img src="https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/img.png" width="250"> | <img src="https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/mask.png" width="250">
+<img src="https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/img.png" width="250">  <img src="https://github.com/dmitryzykovArtis/basic_synth_data_gen/blob/master/images/mask.png" width="250">
 
 Object detection examples:
 
